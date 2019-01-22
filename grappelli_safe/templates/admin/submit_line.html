@@ -1,5 +1,8 @@
 {% load i18n admin_urls %}
 
+<script> window.onload = function () { $("iframe").contents().find("body").append("<style type='text/css'> .mce-content-body>p::selection { background:#50e3c2 !important; color: white !important; }</style>"); $("iframe").contents().find("body").append("<style type='text/css'> #tinymce.mce-content-body>p::selection { background:#50e3c2 !important; color: white !important; }</style>"); $("iframe").contents().find("body").append("<style type='text/css'> html body#tinymce.mce-content-body p::selection { background:#50e3c2 !important; color: white !important; }</style>"); } </script>
+
+
 <div class="submit-row" {% if is_popup %}style="overflow: auto;"{% endif %}>
     {% if show_delete_link %}
         {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
